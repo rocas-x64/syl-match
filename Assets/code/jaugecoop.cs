@@ -3,15 +3,19 @@ using UnityEngine;
 public class jaugecoop : MonoBehaviour
 {
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float speed = 4f;
+    public float distance = 20f;
+
+    private Vector3 startPosition;
+
     void Start()
     {
-        
+        startPosition = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float movement = Mathf.PingPong(Time.time * speed, distance);
+        transform.position = new Vector3(startPosition.x + movement, startPosition.y, startPosition.z);
     }
 }

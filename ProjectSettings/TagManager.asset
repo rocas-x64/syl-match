@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mot
   - Player2
+  - barreRouge
   layers:
   - Default
   - TransparentFX

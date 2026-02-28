@@ -221,9 +221,11 @@ GameObject:
   - component: {fileID: 620363249}
   - component: {fileID: 620363248}
   - component: {fileID: 620363247}
+  - component: {fileID: 620363250}
+  - component: {fileID: 620363251}
   m_Layer: 0
-  m_Name: Square (2)
-  m_TagString: Untagged
+  m_Name: Barre rouge
+  m_TagString: barreRouge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +323,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8415094, g: 0.08097541, b: 0.08097541, a: 1}
@@ -342,12 +344,53 @@ Transform:
   m_GameObject: {fileID: 620363246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.23, y: 1.56, z: -0.32}
+  m_LocalPosition: {x: -2.59, y: 1.58, z: 0}
   m_LocalScale: {x: 0.2963, y: 1.2639, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620363250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620363246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971832bf0021534f932d16e35a4cd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::jaugecoop
+  speed: 3
+  distance: 7
+--- !u!50 &620363251
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620363246}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &890418851
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +494,7 @@ GameObject:
   - component: {fileID: 1663300528}
   - component: {fileID: 1663300527}
   - component: {fileID: 1663300526}
+  - component: {fileID: 1663300529}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -484,10 +528,10 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
@@ -572,12 +616,24 @@ Transform:
   m_GameObject: {fileID: 1663300525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2081, y: 1.569, z: -0.21}
+  m_LocalPosition: {x: 1.2081, y: 1.569, z: 0}
   m_LocalScale: {x: 2.341383, y: 0.91205096, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663300529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663300525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb826105189d5f44a85518b06bcb230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::collisionjauge
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
