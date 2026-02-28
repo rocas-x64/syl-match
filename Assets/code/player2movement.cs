@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class player1movement : MonoBehaviour
+public class player2movement : MonoBehaviour
 {
 //deplacement p1
-public float vitesseDeplacement1 = 1f;
+
+//deplacement p2
+public float vitesseDeplacement2 = 1f;
+
 
 // Start is called once before the first execution of Update after the MonoBehaviour is created
 void Start()
@@ -19,7 +22,7 @@ void Update()
 
 
     // deplacement 1
-    transform.Translate(Deplacement() * vitesseDeplacement1 * Time.deltaTime);
+    transform.Translate(Deplacement() * vitesseDeplacement2 * Time.deltaTime);
 
 
 }
@@ -29,21 +32,21 @@ Vector3 Deplacement()
     Vector3 direction = Vector3.zero;
 
     //gauche droite
-    if (Input.GetKey(KeyCode.A))
+    if (Input.GetKey(KeyCode.LeftArrow))
     {
         direction += Vector3.left;
     }
-    if (Input.GetKey(KeyCode.D))
+    if (Input.GetKey(KeyCode.RightArrow))
     {
         direction += Vector3.right;
     }
 
     //haut bas
-    if (Input.GetKey(KeyCode.W))
+    if (Input.GetKey(KeyCode.UpArrow))
     {
         direction += Vector3.up;
     }
-    if (Input.GetKey(KeyCode.S))
+    if (Input.GetKey(KeyCode.DownArrow))
     {
         direction += Vector3.down;
     }
